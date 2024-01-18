@@ -13,14 +13,7 @@ public class Main {
         list.addLast(10);
         list.addLast(2);
         list.print();
-        CyclicalLinkedList<Integer> list1=new CyclicalLinkedList<>();
-        list1.addLast(3);
-        list1.addLast(9);
-        list1.addLast(2);
-        list1.addLast(3);
-        list1.addLast(9);
-        list1.addLast(2);
-        list1.print();
-        System.out.println(list1.equals(list));
+        list.set(1,56);
+        list.print();
     }
 }

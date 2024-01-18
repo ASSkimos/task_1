@@ -109,6 +109,10 @@ public class CyclicalLinkedList<T> {
         while (curr1 != head);
         return true;
     }
+    public void set(int index, T value) {
+        ListNode node =getNode(index);
+        node.value=value;
+    }
 
 
     private void checkEmpty() throws SimpleLinkedListException {
