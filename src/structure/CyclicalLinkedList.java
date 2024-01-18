@@ -6,12 +6,6 @@ import java.lang.reflect.Array;
 public class CyclicalLinkedList<T> {
 
 
-    public static class SimpleLinkedListException extends Exception {
-        public SimpleLinkedListException(String message) {
-            super(message);
-        }
-    }
-
     private ListNode<T> head = null;
     private ListNode<T> tail = null;
     private int count = 0;
@@ -22,7 +16,6 @@ public class CyclicalLinkedList<T> {
         tail = temp;
         count = 0;
     }
-
     public boolean isEmpty() {
         return count == 0;
     }
@@ -235,5 +228,9 @@ public class CyclicalLinkedList<T> {
         } while (curr != head);
         return array;
     }
-
+    public static class SimpleLinkedListException extends Exception {
+        public SimpleLinkedListException(String message) {
+            super(message);
+        }
+    }
 }

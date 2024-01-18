@@ -2,6 +2,7 @@ import structure.CyclicalLinkedList;
 import java.io.IOException;
 
 
+
 public class Main {
     public static void main(String[] args) throws CyclicalLinkedList.SimpleLinkedListException, IOException {
         CyclicalLinkedList<Integer> list=new CyclicalLinkedList<>();
