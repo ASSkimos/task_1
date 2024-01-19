@@ -9,12 +9,11 @@ public class Main {
         list.addLast(3);
         list.addLast(9);
         list.addLast(2);
-        list.addLast(3);
         list.addLast(9);
         list.addLast(10);
         list.addLast(2);
         list.print();
-        list.set(1,56);
+        list.reverse();
         list.print();
     }
 }

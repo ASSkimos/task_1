@@ -1,6 +1,7 @@
 package structure;
 
 
+import javax.xml.crypto.dom.DOMCryptoContext;
 import java.lang.reflect.Array;
 
 public class CyclicalLinkedList<T> {
@@ -227,6 +228,19 @@ public class CyclicalLinkedList<T> {
 
         } while (curr != head);
         return array;
+    }
+    public void reverse() throws SimpleLinkedListException {
+        checkEmpty();
+        ListNode<T> left=head;
+        ListNode<T> right=tail;
+        do {
+            T temp=left.value;
+            left.value=right.value;
+            right.value=temp;
+            left=left.next;
+            right=right.prev;
+        }
+        while (left!=right && left.prev!=right);
     }
     public static class SimpleLinkedListException extends Exception {
         public SimpleLinkedListException(String message) {
